@@ -27,7 +27,7 @@ object Main {
   def inputSwap(input: AnyRef): Any = input match {
     case  input:List[Any] =>  input.reverse
     case input:Seq[Any] => input.reverse
-    case input:Array[input] => input.reverse.toString();
+    case input:Array[input] => input.reverse.mkString(",")
     case input:(Any,Any) => input.swap
     case _ => "Nothing to return"
   }
@@ -39,7 +39,7 @@ object Main {
   }
 
   val numbers = Array(1, 2)
-  def main(args: Array[String])  = {printTimezone("Africa")}
+  def main(args: Array[String])  = {print(inputSwap(numbers))}
 }
 
 object SquarePrint {
